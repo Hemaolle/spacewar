@@ -1,0 +1,150 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{8246A075-15DB-4923-8931-6E6B63E10FB1}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Spacewar</RootNamespace>
+    <AssemblyName>Spacewar</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Ammus.cs" />
+    <Compile Include="Avustus.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Avustus.Designer.cs">
+      <DependentUpon>Avustus.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HighScoreList.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="HighScoreList.Designer.cs">
+      <DependentUpon>HighScoreList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HighScoreSaver.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HighScoreSaver.Designer.cs">
+      <DependentUpon>HighScoreSaver.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HighScoreTest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HighScoreTest.Designer.cs">
+      <DependentUpon>HighScoreTest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LiikkuvaKohde.cs" />
+    <Compile Include="OhjeYksikko.cs" />
+    <Compile Include="OmaAlus.cs" />
+    <Compile Include="Paavalikko.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Paavalikko.Designer.cs">
+      <DependentUpon>Paavalikko.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Peli.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Peli.Designer.cs">
+      <DependentUpon>Peli.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Rajahdys.cs" />
+    <Compile Include="Vihollinen.cs" />
+    <Compile Include="Viholliset\HarmaaHaikala.cs" />
+    <Compile Include="Viholliset\HarmaaHaikalaB.cs" />
+    <Compile Include="Viholliset\Loppuvastus.cs" />
+    <Compile Include="Viholliset\OranssiOlio.cs" />
+    <Compile Include="Viholliset\PunainenParoni.cs" />
+    <Compile Include="Viholliset\PunainenParoniB.cs" />
+    <Compile Include="Viholliset\SininenSivaltaja.cs" />
+    <Compile Include="Viholliset\SininenSivaltajaB.cs" />
+    <Compile Include="Viholliset\VihreaVipeltaja.cs" />
+    <EmbeddedResource Include="Avustus.resx">
+      <DependentUpon>Avustus.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HighScoreList.resx">
+      <DependentUpon>HighScoreList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HighScoreSaver.resx">
+      <DependentUpon>HighScoreSaver.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HighScoreTest.resx">
+      <DependentUpon>HighScoreTest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Paavalikko.resx">
+      <DependentUpon>Paavalikko.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Peli.resx">
+      <DependentUpon>Peli.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="app.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
